@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 30
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.61"
+}
+
+apply plugin: 'com.github.panpf.bintray-publish'
+
+allprojects {
+    tasks.withType(Javadoc) {
+        options.addStringOption('Xdoclint:none', '-quiet')
+        options.addStringOption('encoding', 'UTF-8')
+    }
+}
+
+buildscript {
+    repositories {
+        //jcenter()
+        jcenter(
+                { url 'https://maven.aliyun.com/repository/jcenter' }
+        )
+    }
+    dependencies {
+        classpath 'com.github.panpf.bintray-publish:bintray-publish:1.0.0'
+    }
+}
+
+publish {
+    userOrg = 'guolindev'
+    groupId = 'com.permissionx.guolindev'
+    artifactId = 'permissionx'
+    publishVersion = '1.4.1-snapshot'
+    desc = 'Make Android runtime permission request easy.'
+    website = 'https://github.com/guolindev/PermissionX'
+}

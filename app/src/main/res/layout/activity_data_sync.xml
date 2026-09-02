@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.DataSyncActivity">
+
+    <ImageView
+        android:background="#157DFF"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"/>
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_marginTop="55dp"
+            android:src="@drawable/ic_login_title"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="315dp"
+            android:layout_height="65dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/shape_bg_login_userinfo"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="453dp">
+
+
+            <LinearLayout
+                android:layout_marginTop="22dp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="数据同步"
+                    android:textColor="#4B4B4B"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginLeft="10dp"
+                android:text="选择同步时间"
+                android:layout_marginTop="10dp"
+                android:textColor="#808080"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSync"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_confirm_sync"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:text="确认同步"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_check_ticket_continue"
+                android:layout_width="140dp"
+                android:layout_height="45dp"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:textSize="18sp"
+        android:textColor="#999999"
+        android:text="设备编码 PDA001"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:drawableLeft="@drawable/ic_device_code"
+        android:drawablePadding="6dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_logout"
+        android:textSize="18sp"
+        android:textColor="#4D4D4D"
+        android:text="退出登录"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="28dp"
+        android:drawablePadding="6dp"
+        android:gravity="center"
+        android:drawableRight="@drawable/ic_log_out"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+
+    <RelativeLayout
+        android:background="#F5F5F5"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="560dp">
+
+
+        <LinearLayout
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/shape_bg_login_userinfo"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="540dp">
+
+          <RelativeLayout
+              android:id="@+id/rl_title_bg"
+              tools:background="#06BD85"
+              android:layout_width="match_parent"
+              android:layout_height="96dp">
+
+              <TextView
+                  android:id="@+id/tv_ticket_status"
+                  android:text="验票成功"
+                  android:textSize="24sp"
+                  android:layout_centerVertical="true"
+                  android:layout_marginLeft="30dp"
+                  android:textColor="#ffffff"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+
+
+
+              <TextView
+                  tools:text="通过一人"
+                  android:layout_alignParentRight="true"
+                  android:textSize="13sp"
+                  android:layout_marginRight="30dp"
+                  android:layout_marginLeft="30dp"
+                  android:textColor="#ffffff"
+                  android:layout_centerVertical="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+          </RelativeLayout>
+
+
+
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:visibility="gone"
+                android:layout_marginTop="12dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#F5F5F5"
+                android:layout_width="245dp"
+                android:layout_height="120dp"/>
+
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:id="@+id/ll_container"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:layout_width="245dp"
+                android:layout_height="wrap_content">
+
+
+               <include
+                   android:visibility="gone"
+                   layout="@layout/item_check_ticket_result"/>
+
+<!--                <include layout="@layout/item_check_ticket_result_two"/>-->
+
+<!--                <include layout="@layout/item_check_ticket_result_three"/>-->
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            tools:visibility="visible"
+            android:id="@+id/ll_recheck"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/tv_cancel_hexiao"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:text="取消核验"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_check_ticket_continue"
+                android:layout_alignParentLeft="true"
+                android:layout_width="120dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/tv_confirm_hexiao"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:text="确认核销"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_check_ticket_continue"
+                android:layout_centerHorizontal="true"
+                android:layout_width="120dp"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            tools:visibility="gone"
+            android:id="@+id/ll_check"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:id="@+id/continue_check_ticket"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:text="继续检票"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_check_ticket_continue"
+                android:layout_alignParentLeft="true"
+                android:layout_width="120dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/tv_face_bulu"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:text="人脸补录"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_check_ticket_continue"
+                android:layout_centerHorizontal="true"
+                android:layout_width="120dp"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

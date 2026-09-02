@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="380dp"
+    android:orientation="vertical"
+    android:background="@drawable/shape_manual_input_dialog"
+    tools:ignore="MissingDefaultResource">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:text="关闭"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#157DFF"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"/>
+
+
+
+        <TextView
+            android:id="@+id/title"
+            android:text="请输入密码"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="#4D4D4D"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:text="确认"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="#157DFF"
+            android:layout_width="100dp"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+    <EditText
+        android:id="@+id/et_conetnt"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/shape_manual_input_edittext"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+
+
+</LinearLayout>

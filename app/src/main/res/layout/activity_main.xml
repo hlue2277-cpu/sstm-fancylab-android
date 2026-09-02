@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:background="#157DFF" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="315dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="55dp"
+            android:src="@drawable/ic_login_title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_bg_login_userinfo"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="自然博物馆"
+                    android:textColor="#4B4B4B"
+                    android:textSize="20sp" />
+
+                <!--                <View-->
+                <!--                    android:layout_marginLeft="8dp"-->
+                <!--                    android:layout_marginRight="8dp"-->
+                <!--                    android:background="#6D7E93"-->
+                <!--                    android:layout_width="1dp"-->
+                <!--                    android:layout_height="8dp"/>-->
+                <!--                -->
+                <!--                <TextView-->
+                <!--                    android:text="主展区"-->
+                <!--                    android:textColor="#4B4B4B"-->
+                <!--                    android:textSize="15sp"-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"/>-->
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0" />
+
+            <LinearLayout
+                android:id="@+id/ll_check_ticket_online"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_lian_wang_jian_piao"
+                    android:drawablePadding="5dp"
+                    android:text="联网检票"
+                    android:textColor="#666666"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_batcheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_lian_wang_jian_piao"
+                    android:drawablePadding="5dp"
+                    android:text="批量核销"
+                    android:textColor="#666666"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_face_detect_exit"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_tuo_ji_cai_ji"
+                    android:drawablePadding="5dp"
+                    android:text="出馆人脸采集"
+                    android:textColor="#666666"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0" />
+
+            <LinearLayout
+                android:id="@+id/ll_face_check_twice"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_tuo_ji_cai_ji"
+                    android:drawablePadding="5dp"
+                    android:text="二次入馆人脸核销"
+                    android:textColor="#666666"
+                    android:textSize="25sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:id="@+id/ll_check_ticket_offline"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_tuo_ji_cai_ji"
+                        android:drawablePadding="5dp"
+                        android:text="脱机采集"
+                        android:textColor="#666666"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#F0F0F0" />
+
+                <LinearLayout
+                    android:id="@+id/ll_team_check"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_tuo_ji_cai_ji"
+                        android:drawablePadding="5dp"
+                        android:text="团队录入"
+                        android:textColor="#666666"
+                        android:textSize="25sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:drawableLeft="@drawable/ic_device_code"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:textColor="#999999"
+                android:textSize="15sp"
+                tools:text="设备编码 PDA001" />
+
+            <TextView
+                android:id="@+id/tv_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="30dp"
+                android:drawableRight="@drawable/ic_log_out"
+                android:drawablePadding="6dp"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="#4D4D4D"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

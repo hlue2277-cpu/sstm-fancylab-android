@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.liuj.huabo">
+
+    <uses-feature android:name="android.hardware.usb.accessory" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- aliyun oss -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name=".common.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.BatCheck"
+            android:exported="true" />
+        <activity
+            android:name=".ui.listview_item"
+            android:exported="true" />
+        <activity
+            android:name=".ui.TeamRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.FaceDetectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.DataSyncActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.TestDbActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CheckResultActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hxdl.lib_qrcode.test.QrCodeScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".ui.HuaBoScanActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.youchain.pda.ui.activity.set.SetServerActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 配置APP ID -->
+        <meta-data
+            android:name="BUGLY_APPID"
+            android:value="f882e6ecd0" />
+        <!-- 配置APP版本号 -->
+        <meta-data
+            android:name="BUGLY_APP_VERSION"
+            android:value="1.1.0" />
+        <!-- 配置APP渠道号 -->
+        <meta-data
+            android:name="BUGLY_APP_CHANNEL"
+            android:value="dev_sanguan" />
+<!--        &lt;!&ndash; 配置Bugly调试模式（true或者false）&ndash;&gt;-->
+<!--        <meta-data-->
+<!--            android:name="BUGLY_ENABLE_DEBUG"-->
+<!--            android:value="<isDebug>" />-->
+    </application>
+
+</manifest>

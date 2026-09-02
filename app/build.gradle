@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+def androidId = rootProject.ext.androidId
+def appId = rootProject.ext.appId
+def support = rootProject.ext.dependencies
+def support_kpt = rootProject.ext.kapts
+
+android {
+    compileSdkVersion androidId.compileSdkVersion
+    buildToolsVersion androidId.buildToolsVersion
+
+    defaultConfig {
+
+
+        configurations.all {
+            resolutionStrategy {
+                force 'androidx.core:core-ktx:1.6.0'
+            }
+
+            resolutionStrategy {
+                        force 'androidx.recyclerview:recyclerview:1.0.0'
+            }
+        }
+
+        applicationId appId.app
+        minSdkVersion  androidId.minSdkVersion
+        targetSdkVersion androidId.targetSdkVersion
+        versionCode androidId.versionCode
+        versionName androidId.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation "androidx.core:core-ktx:+"
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation project(path: ':lib_qrcode')
+    implementation project(path: ':lib_permissionx')
+    implementation project(path: ':cameraview')
+//    implementation files('libs/classes.jar')
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    compile (name: 'deivice-release', ext: 'aar')
+    //compile (name: 'libid2-release', ext: 'aar')
+    compile (name: 'scandecode-release', ext: 'aar')
+
+    //implementation 'com.spd.id2:Id2:2.2.0'
+    implementation 'com.spd.id2:Id2:2.3.4'
+    //友盟
+    implementation  'com.umeng.umsdk:common:9.3.8'// 必选
+    implementation  'com.umeng.umsdk:asms:1.2.2'// 必选
+
+
+//    implementation 'com.speedata:deivice:1.6.0'
+//    implementation 'com.speedata:libid2:2.5.9'
+//    implementation 'com.github.SpeedataG:Device:1.6.8'
+
+    support.each { k , v -> implementation v}
+    support_kpt.each { k , v -> kapt v}
+}

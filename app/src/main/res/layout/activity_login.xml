@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#157DFF"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity">
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_server"
+            android:layout_marginTop="76dp"
+            android:src="@drawable/ic_login_title_top"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="95dp"
+            android:layout_height="95dp"/>
+
+        <ImageView
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_login_title"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="315dp"
+            android:layout_height="65dp"/>
+
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="298dp">
+
+
+            <LinearLayout
+                android:background="@drawable/shape_bg_login_userinfo"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="233dp">
+
+                <TextView
+                    android:text="用户名"
+                    android:textSize="13sp"
+                    android:layout_marginTop="25dp"
+                    android:textColor="#808080"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <EditText
+                    tools:text="testApp123"
+                    android:id="@+id/et_username"
+                    android:hint="请输入用户名"
+                    android:textColorHint="#D4E1F0"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:background="#D4E1F0"
+                    android:layout_height="1dp"/>
+
+                <TextView
+                    android:text="密码"
+                    android:textSize="13sp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#808080"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <EditText
+                    tools:text="testSh2sygeshh"
+                    android:id="@+id/et_password"
+                    android:hint="请输入密码"
+                    android:textColorHint="#D4E1F0"
+                    android:background="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:background="#D4E1F0"
+                    android:layout_height="1dp"/>
+            </LinearLayout>
+
+
+
+
+            <ImageView
+                android:id="@+id/iv_login_confim"
+                android:background="@drawable/bg_login_confirm"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_width="245dp"
+                android:layout_height="90dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_version"
+        tools:text="v1.0.0"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

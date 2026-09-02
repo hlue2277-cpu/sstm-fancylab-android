@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchMatch">
+
+
+<FrameLayout
+    android:background="#000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.hxdl.lib_qrcode.ZXingView
+        android:id="@+id/zxingview"
+        style="@style/MatchMatch"
+        app:qrcv_animTime="1000"
+        app:qrcv_barCodeTipText="将条码放入框内，即可自动扫描"
+        app:qrcv_barcodeRectHeight="120dp"
+        app:qrcv_borderColor="@android:color/white"
+        app:qrcv_borderSize="1dp"
+        app:qrcv_cornerColor="@color/colorPrimaryDark"
+        app:qrcv_cornerDisplayType="center"
+        app:qrcv_cornerLength="20dp"
+        app:qrcv_cornerSize="3dp"
+        app:qrcv_customScanLineDrawable="@drawable/scan_icon_scanline"
+        app:qrcv_isAutoZoom="true"
+        app:qrcv_isBarcode="false"
+        app:qrcv_isOnlyDecodeScanBoxArea="false"
+        app:qrcv_isScanLineReverse="true"
+        app:qrcv_isShowDefaultGridScanLineDrawable="false"
+        app:qrcv_isShowDefaultScanLineDrawable="true"
+        app:qrcv_isShowLocationPoint="true"
+        app:qrcv_isShowTipBackground="true"
+        app:qrcv_isShowTipTextAsSingleLine="false"
+        app:qrcv_isTipTextBelowRect="false"
+        app:qrcv_maskColor="#33FFFFFF"
+        app:qrcv_qrCodeTipText="将二维码/条码放入框内，即可自动扫描"
+        app:qrcv_rectWidth="230dp"
+        app:qrcv_scanLineColor="@color/colorPrimaryDark"
+        app:qrcv_scanLineMargin="0dp"
+        app:qrcv_scanLineSize="0.5dp"
+        app:qrcv_tipTextColor="@android:color/white"
+        app:qrcv_tipTextSize="12sp"
+        app:qrcv_toolbarHeight="56dp"
+        app:qrcv_topOffset="160dp"
+        app:qrcv_verticalBias="-1" />
+
+    <RelativeLayout
+        android:id="@+id/rl_id_card"
+        android:background="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_id_card"
+            android:layout_marginTop="240dp"
+            android:layout_width="226dp"
+            android:layout_height="134dp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="#00000000"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+
+        <FrameLayout
+            android:id="@+id/fl_back"
+            android:layout_width="80dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/ic_back"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="25dp"
+                android:layout_height="25dp"/>
+        </FrameLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:visibility="gone"
+            android:text="扫描"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:layout_gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/switch_scan"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_bg_data_sync"
+            android:gravity="center"
+            android:text="红外模式"
+            android:textSize="18sp"
+            android:textColor="#ffffff" />
+
+
+        <TextView
+            android:id="@+id/tvDataSync"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_bg_data_sync"
+            android:gravity="center"
+            android:text="数据同步"
+            android:textSize="18sp"
+            android:textColor="#ffffff" />
+
+
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_manual_input"
+        android:background="@drawable/shape_bg_manual_input"
+        android:gravity="center"
+        android:text="手动输入票号"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:layout_marginBottom="100dp"
+        android:layout_above="@+id/ll_bottom_navi"
+        android:layout_centerHorizontal="true"
+        android:layout_width="140dp"
+        android:layout_height="40dp"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_navi"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <TextView
+            android:id="@+id/tv_paper_ticket"
+            android:gravity="center"
+            android:text="纸质票"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="#06BD85"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_id_card"
+            android:gravity="center"
+            android:text="身份证件"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="#292929"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_id_face"
+            android:gravity="center"
+            android:text="人脸"
+            android:textSize="20sp"
+            android:textColor="#ffffff"
+            android:background="#292929"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

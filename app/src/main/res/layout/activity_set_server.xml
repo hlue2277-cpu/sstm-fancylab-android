@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="268dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:showDividers="middle|end">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="当前IP"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/now_ip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:breakStrategy="simple"
+                android:ellipsize="end"
+                android:gravity="center_vertical|start"
+                android:hyphenationFrequency="none"
+                android:maxLines="3"
+                android:scrollHorizontally="false"
+                android:text="192.168.1.109"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="当前端口"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/now_port"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:maxLength="22"
+                android:text="8088"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="设置新IP"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/new_ip"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:breakStrategy="simple"
+                android:ellipsize="none"
+                android:gravity="center_vertical|start"
+                android:hint="请输入IP地址"
+                android:hyphenationFrequency="none"
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:maxLines="3"
+                android:minLines="1"
+                android:scrollHorizontally="false"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="检票区域ID"
+                android:textColor="#333333"
+                android:textSize="15sp"
+                android:visibility="invisible" />
+
+            <EditText
+                android:id="@+id/ChkAreaId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="检票区域"
+                android:textSize="15sp"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="设置新端口"
+                android:textColor="#333333"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/new_port"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="请输入端口号"
+                android:maxLength="22"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:text="确认" />
+    </LinearLayout>
+
+
+</LinearLayout>
